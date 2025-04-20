@@ -1,0 +1,12 @@
+[project]
+requires-python = ">=3.10"
+
+[project.dependencies]
+pandas   = "*"
+pyarrow  = "*"
+duckdb   = "*"
+ccxt     = "^4"       # unified exchange REST API  [oai_citation_attribution:0‡GitHub](https://github.com/ccxt/ccxt/blob/master/CHANGELOG.md?utm_source=chatgpt.com)
+glassnode = "^0.4"    # thin wrapper around Glassnode REST v2  [oai_citation_attribution:1‡Introduction | Glassnode Docs](https://docs.glassnode.com/basic-api/api?utm_source=chatgpt.com)
+yfinance = "^0.2"     # for macro proxies (DXY, NDX, 10‑year yield)
+prefect  = "^2.18"    # or airflow==2.9 if you prefer
+python-dotenv = "*"
