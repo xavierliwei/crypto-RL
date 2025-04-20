@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+crypto_btc_ingestion.egg-info/PKG-INFO
+crypto_btc_ingestion.egg-info/SOURCES.txt
+crypto_btc_ingestion.egg-info/dependency_links.txt
+crypto_btc_ingestion.egg-info/entry_points.txt
+crypto_btc_ingestion.egg-info/requires.txt
+crypto_btc_ingestion.egg-info/top_level.txt

@@ -1,0 +1,20 @@
+Metadata-Version: 2.4
+Name: crypto_btc_ingestion
+Version: 0.1.0
+Summary: Data ingestion pipeline for BTC-USD multi-day swing trading agent
+Author-email: Wei Li <xavierliwei@gmail.com>
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+Requires-Dist: pandas>=2.2
+Requires-Dist: pyarrow>=15
+Requires-Dist: duckdb>=0.10
+Requires-Dist: ccxt>=4.2
+Requires-Dist: glassnode>=0.0.2
+Requires-Dist: yfinance>=0.2
+Requires-Dist: prefect>=2.18
+Requires-Dist: python-dotenv>=1.0
+Provides-Extra: dev
+Requires-Dist: pytest>=8; extra == "dev"
+Requires-Dist: pandera>=0.17; extra == "dev"
+Requires-Dist: black>=24; extra == "dev"
+Requires-Dist: ruff>=0.4; extra == "dev"

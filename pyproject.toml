@@ -1,0 +1,52 @@
+[build-system]
+requires = [
+    "setuptools>=68",
+    "wheel"
+]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "crypto_btc_ingestion"
+version = "0.1.0"
+description = "Data ingestion pipeline for BTC-USD multi-day swing trading agent"
+readme = "README.md"
+requires-python = ">=3.9"
+authors = [
+    { name = "Wei Li", email = "xavierliwei@gmail.com" }
+]
+
+# Core runtime dependencies used by the ingestion scripts
+# (see ingestion/fetch_*.py)
+dependencies = [
+    "pandas>=2.2",
+    "pyarrow>=15",
+    "duckdb>=0.10",
+    "ccxt>=4.2",
+    "glassnode>=0.0.2",
+    "yfinance>=0.2",
+    "prefect>=2.18",
+    "python-dotenv>=1.0"
+]
+
+[project.optional-dependencies]
+# Development‑only tooling
+dev = [
+    "pytest>=8",
+    "pandera>=0.17",
+    "black>=24",
+    "ruff>=0.4"
+]
+
+[project.scripts]
+# Entry point that triggers the Prefect ETL flow
+btc-ingest = "ingestion.etl_dag:etl"
+
+[tool.black]
+line-length = 100
+
+[tool.ruff]
+line-length = 100
+select = ["E", "F", "I"]
+
+[tool.pytest.ini_options]
+addopts = "-ra -q"

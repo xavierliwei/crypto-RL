@@ -1,0 +1,2 @@
+[console_scripts]
+btc-ingest = ingestion.etl_dag:etl
